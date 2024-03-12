@@ -1,0 +1,85 @@
+/* Guillermo/styles.css */
+
+body {
+    background-color: #000; /* Fondo negro estilo hacker */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(#004d00, #000); /* Fondo con gradiente radial verde oscuro */
+}
+
+.container {
+    text-align: center;
+    color: #0f0; /* Texto verde estilo hacker */
+}
+
+h1 {
+    color: #00FF00; /* Título verde estilo hacker */
+    font-family: 'Consolas', monospace; /* Fuente estilo hacker */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: glitch 1s infinite; /* Animación de glitch para el título */
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #222; /* Fondo oscuro estilo hacker */
+    color: #0f0; /* Texto verde estilo hacker */
+    border: 2px solid #0f0; /* Borde verde estilo hacker */
+    border-radius: 5px;
+    outline: none; /* Quitamos el contorno al enfocar */
+    transition: border-color 0.3s ease; /* Transición suave */
+    animation: flicker 3s infinite; /* Animación de parpadeo estilo hacker */
+}
+
+input:hover,
+input:focus {
+    border-color: #0a0; /* Borde más claro al pasar el ratón */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #008000; /* Botón verde oscuro estilo hacker */
+    color: #00FFFF; /* Texto cyan estilo hacker */
+    border: 2px solid #00FFFF; /* Borde cyan estilo hacker */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+    animation: shake 5s infinite; /* Animación de movimiento estilo hacker */
+}
+
+button:hover {
+    background-color: #006400; /* Color más oscuro al pasar el ratón */
+}
+
+/* Animación de glitch estilo hacker */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Animación de parpadeo estilo hacker */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Animación de movimiento estilo hacker */
+@keyframes shake {
+    0% { transform: translate(0); }
+    10%, 90% { transform: translate(-5px, 0); }
+    20%, 80% { transform: translate(5px, 0); }
+    30%, 50%, 70% { transform: translate(-5px, 0); }
+    40%, 60% { transform: translate(5px, 0); }
+}
