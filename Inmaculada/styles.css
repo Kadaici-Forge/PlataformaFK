@@ -1,0 +1,85 @@
+/* Inmaculada/styles.css */
+
+body {
+    background-color: #1a1a1a; /* Fondo gris oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(#FFC107, #1a1a1a); /* Fondo con gradiente radial amarillo */
+}
+
+.container {
+    text-align: center;
+    color: #FFD700; /* Texto amarillo dorado */
+}
+
+h1 {
+    color: #FFFFFF; /* Título blanco */
+    font-family: 'Consolas', monospace; /* Fuente estilo hacker */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: glitch 1s infinite; /* Animación de glitch para el título */
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #333; /* Fondo oscuro */
+    color: #FFD700; /* Texto amarillo dorado */
+    border: 2px solid #FFD700; /* Borde amarillo dorado */
+    border-radius: 5px;
+    outline: none; /* Quitamos el contorno al enfocar */
+    transition: border-color 0.3s ease; /* Transición suave */
+    animation: flicker 3s infinite; /* Animación de parpadeo */
+}
+
+input:hover,
+input:focus {
+    border-color: #FFA500; /* Borde anaranjado al pasar el ratón */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #FFD700; /* Botón amarillo dorado */
+    color: #1a1a1a; /* Texto gris oscuro */
+    border: 2px solid #1a1a1a; /* Borde gris oscuro */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+    animation: shake 5s infinite; /* Animación de movimiento */
+}
+
+button:hover {
+    background-color: #FFA500; /* Color más oscuro al pasar el ratón */
+}
+
+/* Animación de glitch estilo hacker */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Animación de parpadeo estilo hacker */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Animación de movimiento estilo hacker */
+@keyframes shake {
+    0% { transform: translate(0); }
+    10%, 90% { transform: translate(-5px, 0); }
+    20%, 80% { transform: translate(5px, 0); }
+    30%, 50%, 70% { transform: translate(-5px, 0); }
+    40%, 60% { transform: translate(5px, 0); }
+}
